@@ -16,31 +16,31 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "portfolio/",
         element: <Top />,
       },
       {
-        path: "/topic",
+        path: "portfolio/topic",
         element: <TopicsLists />,
       },
       {
-        path: "/topic/:id",
+        path: "portfolio/topic/:id",
         element: <TopicsList />,
       },
       {
-        path: "/menu",
+        path: "portfolio/menu",
         element: <MenuList />,
       },
       {
-        path: "/form",
+        path: "portfolio/form",
         element: <ContactFormPage />,
       },
       {
-        path: "/confirm",
+        path: "portfolio/confirm",
         element: <ConfirmPage />,
       },
       {
-        path: "/submit",
+        path: "portfolio/submit",
         element: <SubmitCompletePage />,
       },
     ],
