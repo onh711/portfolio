@@ -614,7 +614,7 @@ object-assign
   margin: 0 auto;
   max-width: 1300px;
 `,BC=z.div`
-  margin: 30px 50px 0;
+  margin: 30px 45px 0;
   max-width: 1300px;
   border-top: 1px solid;
   animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
