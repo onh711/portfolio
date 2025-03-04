@@ -1,7 +1,7 @@
 import Iframe from "react-iframe";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import { shopInfo } from "../data/shopinfo";
+import { shopInfo } from "../data/shopInfo";
 
 export const StoreInformation = () => {
   const { ref: titleRef, inView: titleInview } = useInView({
