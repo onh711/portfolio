@@ -143,6 +143,8 @@ const MenuTopicsContent = styled.div`
 
 const MenuBox = styled.div`
   text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 `;
 
 const MenuIntroduction = styled.div`
