@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import topImg from "../images/top.jpg";
 import kitchen from "../images/kitchen.jpg";
 import yakimeshi from "../images/yakimeshi.jpg";
-import yakibuta from "../images/yakibuta.jpg";
+import yakibuta from "../images/gyouza.jpg";
 
 export const SlideContent = () => {
   return (
