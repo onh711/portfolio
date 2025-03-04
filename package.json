@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://onh711.github.io/portfolio",
+  "homepage": "http://onh711.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
