@@ -129,7 +129,7 @@ export const ContactFormPage = () => {
 };
 
 const ContentWrapper = styled.div`
-  margin: 80px auto;
+  margin: 70px auto;
   justify-content: center;
   max-width: 1300px;
 `;

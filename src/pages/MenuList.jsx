@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { mainMenu, sideMenu, toppingMenu } from "../data/menuItems";
 import noImage from "../images/noimage.png";
-import { useInView } from "react-intersection-observer";
 
 export const MenuList = () => {
   return (
@@ -58,7 +57,7 @@ const Title = styled.h2`
 `;
 
 const MainMenuContent = styled.div`
-  margin: 80px auto 0;
+  margin: 70px auto 0;
   width: 100%;
   max-width: 1300px;
   display: flex;

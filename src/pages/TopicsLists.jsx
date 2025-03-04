@@ -25,7 +25,7 @@ export const TopicsLists = () => {
 };
 
 const TitleWrapper = styled.div`
-  margin: 50px;
+  margin: 70px auto 0;
 `;
 
 const Title = styled.h2`
@@ -42,7 +42,7 @@ const TopicsWrapper = styled.div`
 `;
 
 const TopicsContainer = styled.div`
-  margin: 100px auto 100px;
+  margin: 50px auto 100px;
   width: 100%;
   max-width: 1000px;
 `;

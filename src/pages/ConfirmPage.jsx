@@ -59,6 +59,7 @@ const ConfirmContainer = styled.div`
 
 const ConfirmWrapper = styled.div`
   width: 100%;
+  margin: 70px auto 0;
 `;
 
 const Container = styled.div`
@@ -70,9 +71,9 @@ const Container = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   margin: 0 auto;
-  padding-top: 180px;
+  padding-top: 100px;
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 1.5rem;
