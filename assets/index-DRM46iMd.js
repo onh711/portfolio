@@ -390,6 +390,8 @@ html {
   }
 `,TS=z.div`
   text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 `,PS=z.div`
   margin: 15px;
   text-align: center;
