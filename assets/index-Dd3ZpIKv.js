@@ -738,7 +738,7 @@ object-assign
   font-weight: 600;
   letter-spacing: 1.5rem;
 `,tT=z.div`
-  margin: 80px auto 0;
+  margin: 70px auto 0;
   width: 100%;
   max-width: 1300px;
   display: flex;
@@ -828,7 +828,7 @@ object-assign
   flex: 0.5;
   color: red;
 `,uT=()=>S.jsxs(S.Fragment,{children:[S.jsx(cT,{children:S.jsx(dT,{children:"お知らせ一覧"})}),S.jsx(fT,{children:S.jsx(pT,{children:eo.map((e,t)=>S.jsx(mT,{to:`/topic/${e.id}`,children:S.jsxs(gT,{children:[S.jsx(hT,{children:e.title}),S.jsxs(vT,{children:["記載日: ",e.date]})]})},t))})})]}),cT=z.div`
-  margin: 50px;
+  margin: 70px auto 0;
 `,dT=z.h2`
   margin: 0 auto;
   text-align: center;
@@ -839,7 +839,7 @@ object-assign
 `,fT=z.div`
   margin: 0 30px;
 `,pT=z.div`
-  margin: 100px auto 100px;
+  margin: 50px auto 100px;
   width: 100%;
   max-width: 1000px;
 `,hT=z.h3`
@@ -924,6 +924,7 @@ object-assign
   text-align: center;
 `,bT=z.div`
   width: 100%;
+  margin: 70px auto 0;
 `,zT=z.div`
   margin: 30px;
   padding: 30px;
@@ -931,9 +932,9 @@ object-assign
   background-color: #f5f5f5;
   overflow-x: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-`,OT=z.h1`
+`,OT=z.h2`
   margin: 0 auto;
-  padding-top: 180px;
+  padding-top: 100px;
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 1.5rem;
@@ -1024,7 +1025,7 @@ object-assign
     background-color: gray;
   }
 `,QT=()=>{const[e,t]=P.useState({contactName:"",mailAddress:"",phoneNumber:"",contactDetail:""}),[n,r]=P.useState({contactName:"",mailAddress:"",phoneNumber:"",contactDetail:""}),[i,o]=P.useState(!1),[l,s]=P.useState(!1);P.useEffect(()=>{t({contactName:sessionStorage.getItem("contactName")||"",mailAddress:sessionStorage.getItem("mailAddress")||"",phoneNumber:sessionStorage.getItem("phoneNumber")||"",contactDetail:sessionStorage.getItem("contactDetail")||""})},[]);const a=f=>{const{name:m,value:g}=f.target;t(w=>({...w,[m]:g})),sessionStorage.setItem(m,g);const y=Ei.find(w=>w.id===m);y&&!y.validation(g)?r(w=>({...w,[m]:y.errorMessage})):r(w=>({...w,[m]:""}))},u=f=>{const{name:m,value:g}=f.target,y=Ei.find(w=>w.id===m);y&&!y.validation(g)?r(w=>({...w,[m]:y.errorMessage})):r(w=>({...w,[m]:""}))},c=()=>{o(f=>!f)};return P.useEffect(()=>{const f=Ei.every(m=>m.validation(e[m.id]))&&i;s(f)},[e,i]),S.jsxs(KT,{children:[S.jsx(JT,{children:"お問い合わせ"}),S.jsx(ZT,{children:"ご連絡の際には、下記の必須項目を全て記入の上「次へ」進んでください。"}),S.jsxs(qT,{children:[Ei.map((f,m)=>S.jsxs(eP,{children:[S.jsxs(tP,{children:[S.jsx(nP,{htmlFor:f.id,children:f.item}),f.required&&S.jsx(rP,{children:"※必須"})]}),f.type==="textarea"?S.jsx(lP,{value:e[f.id],name:f.id,id:f.id,onBlur:u,onChange:a}):S.jsx(oP,{value:e[f.id],type:f.type,name:f.id,id:f.id,onChange:a,onBlur:u}),S.jsx(aP,{children:n[f.id]})]},m)),S.jsxs(sP,{children:[S.jsx(uP,{type:"checkbox",checked:i,onChange:c}),S.jsx(cP,{children:"個人情報の取り扱いに同意いただけますか"})]}),S.jsx(iP,{children:"※必須"}),S.jsx(dP,{children:l?S.jsx(ft,{to:"/confirm",state:e,children:S.jsx(ep,{children:"次へ"})}):S.jsx(ep,{disabled:!0,children:"次へ"})})]})]})},KT=z.div`
-  margin: 80px auto;
+  margin: 70px auto;
   justify-content: center;
   max-width: 1300px;
 `,qT=z.div`
