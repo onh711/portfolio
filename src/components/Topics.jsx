@@ -198,12 +198,13 @@ const Arrow = styled.div`
 
 const TopicsListLink = styled.div`
   text-align: center;
-  opacity: 0;
+  max-width: 500px;
+  margin: 0 auto;
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
   animation: ${({ $inView }) =>
-    $inView ? "0.3s fade ease-in-out forwards" : "none"};
+    $inView ? "0.3s fadeIn ease-in-out forwards" : "none"};
 
-  @keyframes fade {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
     }

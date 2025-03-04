@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { mainMenu, sideMenu, toppingMenu } from "../data/MenuItems";
+import { mainMenu, sideMenu, toppingMenu } from "../data/menuItems";
 import noImage from "../images/noimage.png";
+import { useInView } from "react-intersection-observer";
 
 export const MenuList = () => {
   return (
@@ -10,7 +11,10 @@ export const MenuList = () => {
         <MainMenu>
           {mainMenu.map((main, index) => (
             <div key={index}>
-              <img src={main.img === "" ? noImage : main.img} />
+              <MenuImg
+                src={main.img === "" ? noImage : main.img}
+                alt={main.name}
+              />
               <h3>{main.name}</h3>
               <Description>{main.description}</Description>
               <Price>{main.price}</Price>
@@ -85,14 +89,19 @@ const MainMenu = styled.div`
     gap: 40px;
   }
 
-  img {
-    max-width: 100%;
-  }
-
   h3 {
     margin-top: 30px;
     font-size: 2rem;
     font-weight: 500;
+  }
+`;
+
+const MenuImg = styled.img`
+  max-width: 100%;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
   }
 `;
 
