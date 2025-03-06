@@ -8,6 +8,7 @@ export const TopicsList = () => {
   const { id } = useParams();
   const topic = noticeList.find((item) => item.id === id);
 
+  //noticeListに存在しないURLをリクエストしたらエラー表示する
   if (!topic) {
     return <NotFoundContent>該当のお知らせが見つかりません。</NotFoundContent>;
   }

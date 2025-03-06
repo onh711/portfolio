@@ -1,12 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { HeaderLink } from "./Header";
+import { links } from "../data/links";
 
-export const HamburgerMenuUi = ({ links }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+export const HamburgerMenuUi = () => {
+  const [isOpen, setIsOpen] = useState(false); //メニューの開閉状態を管理する
+  const [isAnimating, setIsAnimating] = useState(false); //アニメーションの状態を管理する
 
-  const toggleHamburger = () => {
+  const toggleHamburgerMenu = () => {
     if (isOpen) {
       setIsAnimating(true);
       setIsOpen(false);
@@ -17,15 +18,17 @@ export const HamburgerMenuUi = ({ links }) => {
 
   return (
     <>
-      <HamburgerButton onClick={toggleHamburger} $isOpen={isOpen}>
-        <span />
-        <span />
-        <span />
+      <HamburgerButton onClick={toggleHamburgerMenu}>
+        <HamburgerLine $isOpen={isOpen} />
+        <HamburgerLine $isOpen={isOpen} />
+        <HamburgerLine $isOpen={isOpen} />
       </HamburgerButton>
-      {(isOpen || isAnimating) && (
+      {(isOpen || isAnimating) && ( //もしisOpenがtrueかisAnimatingがtrueならメニューを表示する
         <HamburgerMenu
           $isOpen={isOpen}
-          onAnimationEnd={() => !isOpen && setIsAnimating(false)}
+          onAnimationEnd={() => {
+            !isOpen && setIsAnimating(false);
+          }}
         >
           <ul>
             {links.map((link, index) => (
@@ -57,28 +60,28 @@ const HamburgerButton = styled.button`
   @media (min-width: 770px) {
     display: none;
   }
+`;
 
-  span {
-    background-color: white;
-    width: 30px;
-    height: 2px;
-    position: absolute;
-    transition:
-      transform 0.3s,
-      opacity 0.3s;
-  }
+const HamburgerLine = styled.span`
+  background-color: white;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
 
-  span:nth-of-type(1) {
+  &:nth-of-type(1) {
     top: 10px;
     ${({ $isOpen }) => $isOpen && "transform: translateY(10px) rotate(45deg);"}
   }
 
-  span:nth-of-type(2) {
+  &:nth-of-type(2) {
     top: 20px;
     ${({ $isOpen }) => $isOpen && "opacity: 0;"}
   }
 
-  span:nth-of-type(3) {
+  &:nth-of-type(3) {
     top: 30px;
     ${({ $isOpen }) =>
       $isOpen && "transform: translateY(-10px) rotate(-45deg);"}
