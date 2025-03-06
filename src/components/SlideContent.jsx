@@ -45,9 +45,17 @@ export const SlideContent = () => {
 };
 
 const StyledSwiper = styled(Swiper)`
-  width: 100%; /* Swiperの幅を指定 */
-  height: 800px; /* Swiperの高さを指定 */
-  margin: 0 auto; /* 中央揃え */
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  .swiper-button-next,//ナビゲーションボタンを白に変更
+  .swiper-button-prev {
+    color: white;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: white;
+  }
 `;
 
 const StyledSlide = styled(SwiperSlide)`
