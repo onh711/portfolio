@@ -1,9 +1,9 @@
-import { Introduction } from "../components/Introduction";
-import { Menu } from "../components/Menu";
-import { SlideContent } from "../components/SlideContent";
-import { SnsLink } from "../components/SnsLink";
-import { StoreInformation } from "../components/StoreInformation";
-import { Topics } from "../components/Topics";
+import { Introduction } from "./Top/components/Introduction";
+import { Menu } from "./Top/components/Menu";
+import { SlideContent } from "./Top/components/SlideContent";
+import { SnsLink } from "./Top/components/SnsLink";
+import { StoreInformation } from "./Top/components/StoreInformation";
+import { Topics } from "./Top/components/Topics";
 
 export const Top = () => {
   return (

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 import { StyledLink } from "./Menu";
 import { useState } from "react";
-import { noticeList } from "../data/noticeList";
+import { noticeList } from "../../../data/noticeList";
 
 export const Topics = () => {
   const { ref: titleRef, inView: titleInview } = useInView({

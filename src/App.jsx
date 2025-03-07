@@ -1,6 +1,6 @@
-import { Header } from "./components/Header";
+import { Header } from "./pages/Top/components/Header";
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import { Footer } from "./components/Footer";
+import { Footer } from "./pages/Top/components/Footer";
 import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
