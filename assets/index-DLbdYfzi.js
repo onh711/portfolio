@@ -600,7 +600,7 @@ object-assign
 オープンを記念して、1月末までご来店のお客様に次回使えるトッピング無料券をプレゼント！
 
 皆様のご来店を心よりお待ちしております。
-営業時間やアクセス情報は、当サイトのトップページでご確認ください。`,date:"2024年1月10日",information:"ニュース",img:""}],AC=()=>{const{ref:e,inView:t}=st({rootMargin:"-10px",triggerOnce:!0}),[n,r]=P.useState(!1);return S.jsxs(S.Fragment,{children:[S.jsx(FC,{ref:e,$inView:t,children:"お知らせ"}),S.jsx(BC,{children:S.jsxs(VC,{children:[S.jsx(HC,{children:eo.slice(0,5).map((i,o)=>{const{ref:l,inView:s}=st({rootMargin:"-10px",triggerOnce:!0});return S.jsx(UC,{ref:l,$inView:s,style:{animationDelay:`${o*.2}s`},onAnimationEnd:()=>{o===eo.slice(0,3).length-1&&r(!0)},children:S.jsxs(ft,{to:`/topic/${i.id}`,children:[S.jsxs("div",{children:[S.jsx(WC,{children:i.date}),S.jsx(GC,{children:i.information})]}),S.jsx(XC,{}),S.jsx(YC,{children:i.title})]})},o)})}),S.jsx(QC,{$inView:n,children:S.jsx(fg,{to:"/topic",children:"お知らせ一覧"})})]})})]})},FC=z.div`
+営業時間やアクセス情報は、当サイトのトップページでご確認ください。`,date:"2024年1月10日",information:"ニュース",img:""}],AC=()=>{const{ref:e,inView:t}=st({rootMargin:"-10px",triggerOnce:!0}),[n,r]=P.useState(!1);return S.jsxs(S.Fragment,{children:[S.jsx(FC,{ref:e,$inView:t,children:"お知らせ"}),S.jsx(BC,{children:S.jsxs(VC,{children:[S.jsx(HC,{children:eo.slice(0,5).map((i,o)=>{const{ref:l,inView:s}=st({rootMargin:"-10px",triggerOnce:!0});return S.jsx(UC,{ref:l,$inView:s,style:{animationDelay:`${o*.2}s`},onAnimationEnd:()=>{o===eo.slice(0,5).length-1&&r(!0)},children:S.jsxs(ft,{to:`/topic/${i.id}`,children:[S.jsxs("div",{children:[S.jsx(WC,{children:i.date}),S.jsx(GC,{children:i.information})]}),S.jsx(XC,{}),S.jsx(YC,{children:i.title})]})},o)})}),S.jsx(QC,{$inView:n,children:S.jsx(fg,{to:"/topic",children:"お知らせ一覧"})})]})})]})},FC=z.div`
   margin: 0 auto;
   text-align: center;
   padding-top: 100px;
