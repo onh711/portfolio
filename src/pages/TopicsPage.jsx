@@ -4,11 +4,12 @@ import styled from "styled-components";
 import noImage from "../images/noimage.png";
 import { noticeList } from "../data/noticeList";
 
-export const TopicsList = () => {
+export const TopicsPage = () => {
   const { id } = useParams();
+  //useParamsフックを使用してURLのパラメータからidを取得する
   const topic = noticeList.find((item) => item.id === id);
 
-  //noticeListに存在しないURLをリクエストしたらエラー表示する
+  //noticeListに存在しないURLをリクエストしたらエラーページを表示する
   if (!topic) {
     return <NotFoundContent>該当のお知らせが見つかりません。</NotFoundContent>;
   }
@@ -26,6 +27,7 @@ export const TopicsList = () => {
         <OtherTopicTitle>その他のお知らせ</OtherTopicTitle>
         <OtherTopicText>
           {noticeList
+            // 現在のお知らせのidと同じidのお知らせを除外して表示する
             .filter((notice) => notice.id !== id)
             .map((notice) => (
               <li key={notice.id}>

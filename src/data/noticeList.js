@@ -3,7 +3,7 @@ import karaMiso from "../images/karamiso.jpg";
 import gKei from "../images/Gkei.jpg";
 
 export const noticeList = [
-  //TopicsLists.jsx、TopicsList.jsx、Topics.jsxへエクスポート
+  //TopicsLists.jsx、TopicsPage.jsx、Topics.jsxへエクスポート
   {
     id: "newYearHours",
     title: "年末年始の営業について",

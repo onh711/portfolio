@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Top } from "./pages/Top";
 import { MenuList } from "./pages/MenuList";
 import { TopicsLists } from "./pages/TopicsLists";
-import { TopicsList } from "./pages/TopicsList";
+import { TopicsPage } from "./pages/TopicsPage.jsx";
 import { ConfirmPage } from "./pages/ConfirmPage.jsx";
 import { SubmitCompletePage } from "./pages/SubmitCompletePage.jsx";
 import { ContactFormPage } from "./pages/ContactFormPage.jsx";
@@ -18,7 +18,7 @@ const router = createBrowserRouter(
       children: [
         { path: "/", element: <Top /> },
         { path: "/topic", element: <TopicsLists /> },
-        { path: "/topic/:id", element: <TopicsList /> },
+        { path: "/topic/:id", element: <TopicsPage /> },
         { path: "/menu", element: <MenuList /> },
         { path: "/form", element: <ContactFormPage /> },
         { path: "/confirm", element: <ConfirmPage /> },
