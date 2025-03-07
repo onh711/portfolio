@@ -52,8 +52,7 @@ const Title = styled.h2`
   font-weight: 600;
   letter-spacing: 1.5rem;
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  animation: ${({ $inView }) =>
-    $inView ? "1s fade ease-in-out forwards" : "none"};
+  animation: ${({ $inView }) => ($inView ? "1s fade ease-in-out forwards" : "none")};
 
   @keyframes fade {
     0% {
@@ -94,8 +93,7 @@ const MenuContainer = styled.div`
 
 const FadeInContent = styled.div`
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  transform: ${({ $inView }) =>
-    $inView ? " translateY(0px)" : "translateY(90px)"};
+  transform: ${({ $inView }) => ($inView ? " translateY(0px)" : "translateY(90px)")};
   transition: all 0.8s ease-out;
   transition-delay: 0.2s;
 `;

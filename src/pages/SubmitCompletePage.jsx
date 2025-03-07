@@ -11,9 +11,7 @@ export const SubmitCompletePage = () => {
         <SubmitTextWrapper>
           <SubmitTextContainer>
             <Text>お問い合わせありがとうございます。</Text>
-            <Text>
-              内容を確認後、ご連絡を差し上げますので今しばらくお待ちください。
-            </Text>
+            <Text>内容を確認後、ご連絡を差し上げますので今しばらくお待ちください。</Text>
           </SubmitTextContainer>
         </SubmitTextWrapper>
         <ButtonContainer>

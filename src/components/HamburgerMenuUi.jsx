@@ -83,8 +83,7 @@ const HamburgerLine = styled.span`
 
   &:nth-of-type(3) {
     top: 30px;
-    ${({ $isOpen }) =>
-      $isOpen && "transform: translateY(-10px) rotate(-45deg);"}
+    ${({ $isOpen }) => $isOpen && "transform: translateY(-10px) rotate(-45deg);"}
   }
 `;
 
@@ -96,8 +95,7 @@ const HamburgerMenu = styled.div`
   top: 70px;
   left: 0;
   z-index: 10000;
-  animation: ${({ $isOpen }) =>
-    $isOpen ? "fadeIn 0.3s forwards" : "fadeOut 0.3s forwards"};
+  animation: ${({ $isOpen }) => ($isOpen ? "fadeIn 0.3s forwards" : "fadeOut 0.3s forwards")};
 
   @keyframes fadeIn {
     from {

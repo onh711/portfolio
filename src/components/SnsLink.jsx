@@ -1,8 +1,4 @@
-import {
-  FaSquareXTwitter,
-  FaSquareInstagram,
-  FaSquareYoutube,
-} from "react-icons/fa6";
+import { FaSquareXTwitter, FaSquareInstagram, FaSquareYoutube } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
@@ -99,8 +95,7 @@ const FaceBookLink = styled(FaFacebookSquare)`
   font-size: 60px;
   transition: color 0.8s ease-in-out;
   cursor: pointer;
-  color: ${({ $isFaceBookInView }) =>
-    $isFaceBookInView ? "#4267b2" : "#000000"};
+  color: ${({ $isFaceBookInView }) => ($isFaceBookInView ? "#4267b2" : "#000000")};
 
   &:hover {
     opacity: 0.7;
@@ -113,8 +108,7 @@ const InstagramLink = styled(FaSquareInstagram)`
   transition: color 1s ease-in-out;
   cursor: pointer;
 
-  color: ${({ $isInstagramInView }) =>
-    $isInstagramInView ? "#e1306c" : "#000000"};
+  color: ${({ $isInstagramInView }) => ($isInstagramInView ? "#e1306c" : "#000000")};
 
   &:hover {
     opacity: 0.7;
@@ -126,8 +120,7 @@ const YoutubeLink = styled(FaSquareYoutube)`
   font-size: 60px;
   transition: color 1.4s ease-in-out;
   cursor: pointer;
-  color: ${({ $isYoutubeInView }) =>
-    $isYoutubeInView ? "#ff0000" : "#000000"};
+  color: ${({ $isYoutubeInView }) => ($isYoutubeInView ? "#ff0000" : "#000000")};
   &:hover {
     opacity: 0.7;
   }

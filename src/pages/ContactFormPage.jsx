@@ -64,17 +64,14 @@ export const ContactFormPage = () => {
 
   // 入力値やエラー状態、チェックボックスの状態の変化を監視して、フォーム全体の有効性を更新する
   useEffect(() => {
-    const valid =
-      formItems.every((item) => item.validation(formData[item.id])) && isCheck;
+    const valid = formItems.every((item) => item.validation(formData[item.id])) && isCheck;
     setIsFormValid(valid);
   }, [formData, isCheck]);
 
   return (
     <ContentWrapper>
       <Title>お問い合わせ</Title>
-      <Subtitle>
-        ご連絡の際には、下記の必須項目を全て記入の上「次へ」進んでください。
-      </Subtitle>
+      <Subtitle>ご連絡の際には、下記の必須項目を全て記入の上「次へ」進んでください。</Subtitle>
       <FormContainer>
         {formItems.map((form, id) => (
           <FormContent key={id}>
@@ -106,9 +103,7 @@ export const ContactFormPage = () => {
 
         <CheckBoxContent>
           <CheckBox type="checkbox" checked={isCheck} onChange={handleClick} />
-          <PersonalInformation>
-            個人情報の取り扱いに同意いただけますか
-          </PersonalInformation>
+          <PersonalInformation>個人情報の取り扱いに同意いただけますか</PersonalInformation>
         </CheckBoxContent>
         <CheckBoxRequired>※必須</CheckBoxRequired>
         <SendButtonContainer>

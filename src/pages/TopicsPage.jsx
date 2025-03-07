@@ -31,9 +31,7 @@ export const TopicsPage = () => {
             .filter((notice) => notice.id !== id)
             .map((notice) => (
               <li key={notice.id}>
-                <StyledLink to={`/topic/${notice.id}`}>
-                  {notice.title}
-                </StyledLink>
+                <StyledLink to={`/topic/${notice.id}`}>{notice.title}</StyledLink>
               </li>
             ))}
         </OtherTopicText>

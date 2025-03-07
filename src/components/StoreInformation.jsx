@@ -60,8 +60,7 @@ const Title = styled.h2`
   letter-spacing: 1.5rem;
 
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  animation: ${({ $inView }) =>
-    $inView ? "1s fade ease-in-out forwards" : "none"};
+  animation: ${({ $inView }) => ($inView ? "1s fade ease-in-out forwards" : "none")};
 
   @keyframes fade {
     0% {
@@ -97,8 +96,7 @@ const StoreInformationWrapper = styled.div`
 
 const StoreInformationContainer = styled.div`
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  transform: ${({ $inView }) =>
-    $inView ? " translateX(0px)" : "translateX(90px)"};
+  transform: ${({ $inView }) => ($inView ? " translateX(0px)" : "translateX(90px)")};
   transition: all 0.8s ease-out;
   transition-delay: 0.6s;
 
@@ -112,8 +110,7 @@ const IframeContainer = styled.div`
   margin-top: 25px;
   width: 50%;
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  transform: ${({ $inView }) =>
-    $inView ? " translateX(0px)" : "translateX(-90px)"};
+  transform: ${({ $inView }) => ($inView ? " translateX(0px)" : "translateX(-90px)")};
   transition: all 0.8s ease-out;
   transition-delay: 0.6s;
   overflow: hidden;

@@ -8,12 +8,7 @@ export const ConfirmPage = () => {
 
   //ContactFormPage.jsxからのデータを送信ボタンを押したときに削除する
   const handleClick = () => {
-    const sessionItems = [
-      "contactName",
-      "mailAddress",
-      "phoneNumber",
-      "contactDetail",
-    ];
+    const sessionItems = ["contactName", "mailAddress", "phoneNumber", "contactDetail"];
     sessionItems.forEach((item) => sessionStorage.removeItem(item));
   };
 

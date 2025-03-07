@@ -10,10 +10,7 @@ export const MenuList = () => {
         <MainMenu>
           {mainMenu.map((main, index) => (
             <div key={index}>
-              <MenuImg
-                src={main.img === "" ? noImage : main.img}
-                alt={main.name}
-              />
+              <MenuImg src={main.img === "" ? noImage : main.img} alt={main.name} />
               <h3>{main.name}</h3>
               <Description>{main.description}</Description>
               <Price>{main.price}</Price>

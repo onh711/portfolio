@@ -19,12 +19,7 @@ export const Introduction = () => {
         濃厚でありながらも、最後まで飽きることなく食べられる味わいを追求しました。
       </IntroductionTitleSentence>
       <ImgWrapper>
-        <IntroductionImg
-          src={introImg}
-          alt="ラーメン画像"
-          ref={ref}
-          $inView={inView}
-        />
+        <IntroductionImg src={introImg} alt="ラーメン画像" ref={ref} $inView={inView} />
       </ImgWrapper>
     </>
   );
@@ -57,8 +52,7 @@ const IntroductionImg = styled.img`
   width: 90%;
   max-width: 1200px;
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  transform: ${({ $inView }) =>
-    $inView ? " translateX(0px)" : "translateX(90px)"};
+  transform: ${({ $inView }) => ($inView ? " translateX(0px)" : "translateX(90px)")};
   transition: all 0.8s ease-out;
   transition-delay: 0.6s;
 `;

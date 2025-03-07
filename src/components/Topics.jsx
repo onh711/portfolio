@@ -34,8 +34,7 @@ export const Topics = () => {
                   key={index}
                   style={{ animationDelay: `${index * 0.2}s` }}
                   onAnimationEnd={() => {
-                    index === noticeList.slice(0, 3).length - 1 &&
-                      setUlAnimationFinished(true);
+                    index === noticeList.slice(0, 3).length - 1 && setUlAnimationFinished(true);
                   }}
                 >
                   <Link to={`/topic/${topic.id}`}>
@@ -67,8 +66,7 @@ const Title = styled.div`
   font-weight: 600;
   letter-spacing: 1.5rem;
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  animation: ${({ $inView }) =>
-    $inView ? "1s fade ease-in-out forwards" : "none"};
+  animation: ${({ $inView }) => ($inView ? "1s fade ease-in-out forwards" : "none")};
 
   @keyframes fade {
     0% {
@@ -201,8 +199,7 @@ const TopicsListLink = styled.div`
   max-width: 500px;
   margin: 0 auto;
   opacity: ${({ $inView }) => ($inView ? 1 : 0)};
-  animation: ${({ $inView }) =>
-    $inView ? "0.3s fadeIn ease-in-out forwards" : "none"};
+  animation: ${({ $inView }) => ($inView ? "0.3s fadeIn ease-in-out forwards" : "none")};
 
   @keyframes fadeIn {
     0% {
