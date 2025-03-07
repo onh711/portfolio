@@ -34,7 +34,7 @@ export const Topics = () => {
                   key={index}
                   style={{ animationDelay: `${index * 0.2}s` }}
                   onAnimationEnd={() => {
-                    index === noticeList.slice(0, 3).length - 1 && setUlAnimationFinished(true);
+                    index === noticeList.slice(0, 5).length - 1 && setUlAnimationFinished(true);
                   }}
                 >
                   <Link to={`/topic/${topic.id}`}>
