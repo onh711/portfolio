@@ -19,11 +19,11 @@ https://onh711.github.io/portfolio/
 なお、ポートフォリオとして作成したため、実際の店名や画像など、店舗に関わる情報は一切使用しておりません。
 
 ## 仕様技術
-React
-styled-components
-react-intersection-observer
-react-router
-react-icons
+React  
+styled-components  
+react-intersection-observer  
+react-router  
+react-icons  
 swiper
 
 ## 今後の課題や挑戦したいこと
