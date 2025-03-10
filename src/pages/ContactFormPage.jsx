@@ -18,26 +18,21 @@ export const ContactFormPage = () => {
     contactDetail: "",
   });
 
+  //input要素にフォーカスを当てたかどうかを管理する
+  const [isFirstTouch, setIsFirstTouch] = useState({
+    contactName: false,
+    mailAddress: false,
+    phoneNumber: false,
+    contactDetail: false,
+  });
   // チェックボックスは初期状態でオフにする
   const [isCheck, setIsCheck] = useState(false);
-
   // フォーム全体の有効性を状態として管理
   const [isFormValid, setIsFormValid] = useState(false);
-
-  useEffect(() => {
-    setFormData({
-      contactName: sessionStorage.getItem("contactName") || "",
-      mailAddress: sessionStorage.getItem("mailAddress") || "",
-      phoneNumber: sessionStorage.getItem("phoneNumber") || "",
-      contactDetail: sessionStorage.getItem("contactDetail") || "",
-    });
-  }, []);
 
   const handleInput = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    sessionStorage.setItem(name, value);
-
     const item = formItems.find((item) => item.id === name);
     if (item && !item.validation(value)) {
       setErrors((prev) => ({ ...prev, [name]: item.errorMessage }));
@@ -50,6 +45,8 @@ export const ContactFormPage = () => {
   const handleBlur = (e) => {
     const { name, value } = e.target;
     const item = formItems.find((item) => item.id === name);
+    //blurでフォーカスを外した時にfistTouchをtrueにする
+    setIsFirstTouch((prev) => ({ ...prev, [name]: true }));
     if (item && !item.validation(value)) {
       setErrors((prev) => ({ ...prev, [name]: item.errorMessage }));
     } else {
@@ -84,8 +81,11 @@ export const ContactFormPage = () => {
                 value={formData[form.id]}
                 name={form.id}
                 id={form.id}
-                onBlur={handleBlur}
                 onChange={handleInput}
+                onBlur={handleBlur}
+                $errors={errors[form.id]}
+                $value={formData[form.id]}
+                $isFirstInput={isFirstTouch[form.id]}
               />
             ) : (
               <FormInput
@@ -95,9 +95,14 @@ export const ContactFormPage = () => {
                 id={form.id}
                 onChange={handleInput}
                 onBlur={handleBlur}
+                $errors={errors[form.id]}
+                $value={formData[form.id]}
+                $isFirstInput={isFirstTouch[form.id]}
               />
             )}
-            <ErrorComment>{errors[form.id]}</ErrorComment>
+            <ErrorComment isFirstInput={isFirstTouch[form.id]}>
+              {isFirstTouch[form.id] === true ? errors[form.id] : ""}
+            </ErrorComment>
           </FormContent>
         ))}
 
@@ -110,7 +115,7 @@ export const ContactFormPage = () => {
           {isFormValid ? (
             <Link //全ての要素を満たさなければリンクなしのボタンを活性化させる
               to={"/confirm"}
-              state={formData} //sesionstrageのkeyとvalueをConfirmPageに渡す
+              state={formData} //keyとvalueをConfirmPageに渡す
             >
               <SendButton>次へ</SendButton>
             </Link>
@@ -179,8 +184,15 @@ const FormInput = styled.input`
   height: 40px;
   width: 65%;
   padding: 8px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  border-color: ${({ $value, $errors, $isFirstInput }) =>
+    $isFirstInput ? ($errors ? "red" : $value === "" ? "#ccc" : "#16d135") : "#ccc"};
+
+  &:focus {
+    outline: none;
+  }
 `;
 const ContactTextArea = styled.textarea`
   font-size: 1.5rem;
@@ -190,6 +202,12 @@ const ContactTextArea = styled.textarea`
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
+  border-color: ${({ $value, $errors, $isFirstInput }) =>
+    $isFirstInput ? ($errors ? "red" : $value === "" ? "#ccc" : "#16d135") : "#ccc"};
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const ErrorComment = styled.div`
