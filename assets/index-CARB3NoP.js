@@ -1123,4 +1123,4 @@ object-assign
   margin-bottom: 25px;
   border: none;
   cursor: ${({disabled:e})=>e?"not-allowed":"pointer"};
-`,pP=Rx([{path:"/",element:S.jsx(oS,{}),children:[{path:"/",element:S.jsx(KC,{})},{path:"/topic",element:S.jsx(cT,{})},{path:"/topic/:id",element:S.jsx(wT,{})},{path:"/menu",element:S.jsx(eT,{})},{path:"/form",element:S.jsx(KT,{})},{path:"/confirm",element:S.jsx(IT,{})},{path:"/submit",element:S.jsx(VT,{})}]}],{basename:"/portfolio"});gm(document.getElementById("root")).render(S.jsx(P.StrictMode,{children:S.jsx(Hx,{router:pP})}));
+`,pP=Rx([{path:"/",element:S.jsx(oS,{}),children:[{path:"/",element:S.jsx(KC,{})},{path:"/topic",element:S.jsx(cT,{})},{path:"/topic/:id",element:S.jsx(wT,{})},{path:"/menu",element:S.jsx(eT,{})},{path:"/form",element:S.jsx(KT,{})},{path:"/confirm",element:S.jsx(IT,{})},{path:"/submit",element:S.jsx(VT,{})}]}],{basename:"/portfolio/"});gm(document.getElementById("root")).render(S.jsx(P.StrictMode,{children:S.jsx(Hx,{router:pP})}));
