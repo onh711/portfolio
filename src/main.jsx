@@ -26,11 +26,11 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/portfolio" },
+  { basename: "/portfolio/" }
 );
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 );
