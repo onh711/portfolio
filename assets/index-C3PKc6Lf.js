@@ -833,7 +833,7 @@ object-assign
   text-align: right;
   flex: 0.5;
   color: red;
-`,cT=()=>S.jsxs(S.Fragment,{children:[S.jsx(dT,{children:S.jsx(fT,{children:"お知らせ一覧"})}),S.jsx(pT,{children:S.jsx(hT,{children:eo.map((e,t)=>S.jsx(gT,{to:`/topic/${e.id}`,children:S.jsxs(vT,{children:[S.jsx(mT,{children:e.title}),S.jsxs(yT,{children:["記載日: ",e.date]})]})},t))})})]}),dT=z.div`
+`,cT=()=>S.jsxs(S.Fragment,{children:[S.jsx(dT,{children:S.jsx(fT,{children:"お知らせ一覧"})}),S.jsx(pT,{children:S.jsx(hT,{children:eo.map((e,t)=>S.jsx(gT,{to:`/topic/${e.id}`,children:S.jsxs(vT,{children:[S.jsx(mT,{children:e.title}),S.jsxs(yT,{children:["掲載日: ",e.date]})]})},t))})})]}),dT=z.div`
   margin: 70px auto 0;
 `,fT=z.h2`
   margin: 0 auto;
@@ -852,14 +852,14 @@ object-assign
   font-size: 1.7rem;
   margin: 0 auto;
   padding-top: 50px;
-`,gT=z(ft)`
-  text-decoration: none;
-  color: black;
   transition: 0.3s;
 
   &:hover {
     color: #f54747;
   }
+`,gT=z(ft)`
+  text-decoration: none;
+  color: black;
 `,vT=z.div`
   border-bottom: 1px dotted;
 `,yT=z.p`
