@@ -14,7 +14,7 @@ export const TopicsLists = () => {
             <StyledLink key={index} to={`/topic/${notice.id}`}>
               <TopicsContent>
                 <ContentTitle>{notice.title}</ContentTitle>
-                <UpdatedDate>記載日: {notice.date}</UpdatedDate>
+                <UpdatedDate>掲載日: {notice.date}</UpdatedDate>
               </TopicsContent>
             </StyledLink>
           ))}
@@ -51,16 +51,16 @@ const ContentTitle = styled.h3`
   font-size: 1.7rem;
   margin: 0 auto;
   padding-top: 50px;
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
   transition: 0.3s;
 
   &:hover {
     color: #f54747;
   }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 const TopicsContent = styled.div`
