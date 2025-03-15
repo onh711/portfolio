@@ -85,7 +85,7 @@ export const ContactFormPage = () => {
                 onBlur={handleBlur}
                 $errors={errors[form.id]}
                 $value={formData[form.id]}
-                $isFirstInput={isFirstTouch[form.id]}
+                $isFirstTouch={isFirstTouch[form.id]}
               />
             ) : (
               <FormInput
@@ -97,10 +97,10 @@ export const ContactFormPage = () => {
                 onBlur={handleBlur}
                 $errors={errors[form.id]}
                 $value={formData[form.id]}
-                $isFirstInput={isFirstTouch[form.id]}
+                $isFirstTouch={isFirstTouch[form.id]}
               />
             )}
-            <ErrorComment isFirstInput={isFirstTouch[form.id]}>
+            <ErrorComment $isFirstTouch={isFirstTouch[form.id]}>
               {isFirstTouch[form.id] === true ? errors[form.id] : ""}
             </ErrorComment>
           </FormContent>
