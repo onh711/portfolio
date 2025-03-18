@@ -187,8 +187,8 @@ const FormInput = styled.input`
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: 0.3s;
-  border-color: ${({ $value, $errors, $isFirstInput }) =>
-    $isFirstInput ? ($errors ? "red" : $value === "" ? "#ccc" : "#16d135") : "#ccc"};
+  border-color: ${({ $value, $errors, $isFirstTouch }) =>
+    $isFirstTouch ? ($errors ? "red" : $value === "" ? "#ccc" : "#16d135") : "#ccc"};
 
   &:focus {
     outline: none;
@@ -202,8 +202,8 @@ const ContactTextArea = styled.textarea`
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
-  border-color: ${({ $value, $errors, $isFirstInput }) =>
-    $isFirstInput ? ($errors ? "red" : $value === "" ? "#ccc" : "#16d135") : "#ccc"};
+  border-color: ${({ $value, $errors, $isFirstTouch }) =>
+    $isFirstTouch ? ($errors ? "red" : $value === "" ? "#ccc" : "#16d135") : "#ccc"};
 
   &:focus {
     outline: none;
