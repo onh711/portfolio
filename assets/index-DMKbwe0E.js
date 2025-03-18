@@ -1078,7 +1078,7 @@ object-assign
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: 0.3s;
-  border-color: ${({$value:e,$errors:t,$isFirstInput:n})=>n?t?"red":e===""?"#ccc":"#16d135":"#ccc"};
+  border-color: ${({$value:e,$errors:t,$isFirstTouch:n})=>n?t?"red":e===""?"#ccc":"#16d135":"#ccc"};
 
   &:focus {
     outline: none;
@@ -1091,7 +1091,7 @@ object-assign
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
-  border-color: ${({$value:e,$errors:t,$isFirstInput:n})=>n?t?"red":e===""?"#ccc":"#16d135":"#ccc"};
+  border-color: ${({$value:e,$errors:t,$isFirstTouch:n})=>n?t?"red":e===""?"#ccc":"#16d135":"#ccc"};
 
   &:focus {
     outline: none;
