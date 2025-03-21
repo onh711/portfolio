@@ -59,6 +59,7 @@ const StyledLink = styled(Link)`
 
   &::after {
     position: absolute;
+    left: 0;
     content: "";
     width: 100%;
     height: 2px;
