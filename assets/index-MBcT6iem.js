@@ -925,7 +925,7 @@ object-assign
     color: #f54747;
     font-weight: 600;
   }
-`,Ei=[{id:"contactName",item:"お名前",type:"text",required:!0,validation:e=>e.trim().length>0,errorMessage:"名前を入力してください"},{id:"mailAddress",item:"メールアドレス",type:"email",required:!0,validation:e=>e.match(/.+@.+\..+/),errorMessage:"正しいメールアドレスの形式で入力してください"},{id:"phoneNumber",item:"電話番号",type:"tel",required:!0,validation:e=>e.match(/^(0[5-9]0[-]?[0-9]{4}[-]?[0-9]{4}|0120[-]?[0-9]{1,3}[-]?[0-9]{4}|050[-]?[0-9]{4}[-]?[0-9]{4}|0[1-9][-]?[0-9]{1,4}[-]?[0-9]{1,4}[-]?[0-9]{4})$/),errorMessage:"正しい電話番号を入力してください"},{id:"contactDetail",item:"お問い合わせ内容",type:"textarea",required:!0,validation:e=>e.trim().length>=10,errorMessage:"お問い合わせ内容は10文字以上入力してください"}],IT=()=>{const t=Xt().state,n=()=>{["contactName","mailAddress","phoneNumber","contactDetail"].forEach(i=>sessionStorage.removeItem(i))};return S.jsx(S.Fragment,{children:S.jsx(bT,{children:S.jsxs(OT,{children:[S.jsx(_T,{children:"確認画面"}),S.jsxs(jT,{children:["以下の内容で送信してよろしいですか？",S.jsx("br",{}),"内容に間違いなければ「送信」ボタンを押してください。"]}),S.jsxs(zT,{children:[S.jsx($T,{children:"送信内容"}),Object.keys(t).map((r,i)=>S.jsxs(NT,{children:[S.jsx(DT,{children:Ei[i].item}),S.jsx(AT,{children:t[r]})]},r))]}),S.jsxs(FT,{children:[S.jsx(ft,{to:"/submit",children:S.jsx(Zf,{onClick:n,children:"送信"})}),S.jsx(ft,{to:"/form",children:S.jsx(Zf,{children:"戻る"})})]})]})})})},bT=O.div`
+`,Ei=[{id:"contactName",item:"お名前",type:"text",required:!0,validation:e=>e.trim().length>0,errorMessage:"名前を入力してください"},{id:"mailAddress",item:"メールアドレス",type:"email",required:!0,validation:e=>e.match(/.+@.+\..+/),errorMessage:"正しいメールアドレスの形式で入力してください"},{id:"phoneNumber",item:"電話番号",type:"tel",required:!0,validation:e=>e.match(/^(0[5-9]0[-]?[0-9]{4}[-]?[0-9]{4}|0120[-]?[0-9]{1,3}[-]?[0-9]{4}|050[-]?[0-9]{4}[-]?[0-9]{4}|0[1-9][-]?[0-9]{1,4}[-]?[0-9]{1,4}[-]?[0-9]{4})$/),errorMessage:"正しい電話番号を入力してください"},{id:"contactDetail",item:"お問い合わせ内容",type:"textarea",required:!0,validation:e=>e.trim().length>=10,errorMessage:"お問い合わせ内容は10文字以上入力してください"}],IT=()=>{const t=Xt().state;return S.jsx(S.Fragment,{children:S.jsx(bT,{children:S.jsxs(OT,{children:[S.jsx(_T,{children:"確認画面"}),S.jsxs(jT,{children:["以下の内容で送信してよろしいですか？",S.jsx("br",{}),"内容に間違いなければ「送信」ボタンを押してください。"]}),S.jsxs(zT,{children:[S.jsx($T,{children:"送信内容"}),Object.keys(t).map((n,r)=>S.jsxs(NT,{children:[S.jsx(DT,{children:Ei[r].item}),S.jsx(AT,{children:t[n]})]},n))]}),S.jsxs(FT,{children:[S.jsx(ft,{to:"/submit",children:S.jsx(Zf,{children:"送信"})}),S.jsx(ft,{to:"/form",children:S.jsx(Zf,{children:"戻る"})})]})]})})})},bT=O.div`
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -1031,7 +1031,7 @@ object-assign
   &:hover {
     background-color: gray;
   }
-`,KT=()=>{const[e,t]=P.useState({contactName:"",mailAddress:"",phoneNumber:"",contactDetail:""}),[n,r]=P.useState({contactName:"",mailAddress:"",phoneNumber:"",contactDetail:""}),[i,o]=P.useState({contactName:!1,mailAddress:!1,phoneNumber:!1,contactDetail:!1}),[l,s]=P.useState(!1),[a,u]=P.useState(!1),c=g=>{const{name:y,value:w}=g.target;t(f=>({...f,[y]:w}));const C=Ei.find(f=>f.id===y);C&&!C.validation(w)?r(f=>({...f,[y]:C.errorMessage})):r(f=>({...f,[y]:""}))},p=g=>{const{name:y,value:w}=g.target,C=Ei.find(f=>f.id===y);o(f=>({...f,[y]:!0})),C&&!C.validation(w)?r(f=>({...f,[y]:C.errorMessage})):r(f=>({...f,[y]:""}))},m=()=>{s(g=>!g)};return P.useEffect(()=>{const g=Ei.every(y=>y.validation(e[y.id]))&&l;u(g)},[e,l]),S.jsxs(qT,{children:[S.jsx(ZT,{children:"お問い合わせ"}),S.jsx(eP,{children:"ご連絡の際には、下記の必須項目を全て記入の上「次へ」進んでください。"}),S.jsxs(JT,{children:[Ei.map((g,y)=>S.jsxs(tP,{children:[S.jsxs(nP,{children:[S.jsx(rP,{htmlFor:g.id,children:g.item}),g.required&&S.jsx(iP,{children:"※必須"})]}),g.type==="textarea"?S.jsx(aP,{value:e[g.id],name:g.id,id:g.id,onChange:c,onBlur:p,$errors:n[g.id],$value:e[g.id],$isFirstTouch:i[g.id]}):S.jsx(lP,{value:e[g.id],type:g.type,name:g.id,id:g.id,onChange:c,onBlur:p,$errors:n[g.id],$value:e[g.id],$isFirstTouch:i[g.id]}),S.jsx(sP,{$isFirstTouch:i[g.id],children:i[g.id]===!0?n[g.id]:""})]},y)),S.jsxs(uP,{children:[S.jsx(cP,{type:"checkbox",checked:l,onChange:m}),S.jsx(dP,{children:"個人情報の取り扱いに同意いただけますか"})]}),S.jsx(oP,{children:"※必須"}),S.jsx(fP,{children:a?S.jsx(ft,{to:"/confirm",state:e,children:S.jsx(tp,{children:"次へ"})}):S.jsx(tp,{disabled:!0,children:"次へ"})})]})]})},qT=O.div`
+`,KT=()=>{const[e,t]=P.useState({contactName:"",mailAddress:"",phoneNumber:"",contactDetail:""}),[n,r]=P.useState({contactName:"",mailAddress:"",phoneNumber:"",contactDetail:""}),[i,o]=P.useState({contactName:!1,mailAddress:!1,phoneNumber:!1,contactDetail:!1}),[l,s]=P.useState(!1),[a,u]=P.useState(!1),c=g=>{const{name:y,value:w}=g.target;t(f=>({...f,[y]:w}));const C=Ei.find(f=>f.id===y);C&&!C.validation(w)?r(f=>({...f,[y]:C.errorMessage})):r(f=>({...f,[y]:""}))},p=g=>{const{name:y,value:w}=g.target,C=Ei.find(f=>f.id===y);o(f=>({...f,[y]:!0})),C&&!C.validation(w)?r(f=>({...f,[y]:C.errorMessage})):r(f=>({...f,[y]:""}))},m=()=>{s(g=>!g)};return P.useEffect(()=>{const g=Ei.every(y=>y.validation(e[y.id]))&&l;u(g)},[e,l]),S.jsxs(qT,{children:[S.jsx(ZT,{children:"お問い合わせ"}),S.jsx(eP,{children:"ご連絡の際には、下記の必須項目を全て記入の上「次へ」進んでください。"}),S.jsxs(JT,{children:[Ei.map((g,y)=>S.jsxs(tP,{children:[S.jsxs(nP,{children:[S.jsx(rP,{htmlFor:g.id,children:g.item}),g.required&&S.jsx(iP,{children:"※必須"})]}),g.type==="textarea"?S.jsx("div",{children:S.jsx(aP,{value:e[g.id],name:g.id,id:g.id,onChange:c,onBlur:p,$errors:n[g.id],$value:e[g.id],$isFirstTouch:i[g.id]})}):S.jsx("div",{children:S.jsx(lP,{value:e[g.id],type:g.type,name:g.id,id:g.id,onChange:c,onBlur:p,$errors:n[g.id],$value:e[g.id],$isFirstTouch:i[g.id]})}),S.jsx(sP,{$isFirstTouch:i[g.id],children:i[g.id]===!0?n[g.id]:""})]},y)),S.jsxs(uP,{children:[S.jsx(cP,{type:"checkbox",checked:l,onChange:m}),S.jsx(dP,{children:"個人情報の取り扱いに同意いただけますか"})]}),S.jsx(oP,{children:"※必須"}),S.jsx(fP,{children:a?S.jsx(ft,{to:"/confirm",state:e,children:S.jsx(tp,{children:"次へ"})}):S.jsx(tp,{disabled:!0,children:"次へ"})})]})]})},qT=O.div`
   margin: 70px auto;
   justify-content: center;
   max-width: 1300px;
@@ -1055,7 +1055,7 @@ object-assign
   font-size: 2rem;
 `,tP=O.div`
   margin: 20px 0;
-`,nP=O.div`
+`,nP=O.span`
   margin-bottom: 8px;
 `,rP=O.label`
   font-size: 1.8rem;
@@ -1074,8 +1074,8 @@ object-assign
 `,lP=O.input`
   font-size: 1.8rem;
   height: 40px;
-  width: 65%;
-  padding: 8px;
+  width: 100%;
+  padding: 0 0 0 3px;
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: 0.3s;
@@ -1086,9 +1086,9 @@ object-assign
   }
 `,aP=O.textarea`
   font-size: 1.5rem;
-  width: 95%;
   height: 200px;
-  padding: 8px;
+  width: 100%;
+  padding: 0 0 0 3px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
