@@ -2,15 +2,10 @@ import { useLocation, Link } from "react-router-dom";
 import styled from "styled-components";
 import { formItems } from "../data/formItems";
 
+//フォーム内容の送信処理が未実装のため今後の課題
 export const ConfirmPage = () => {
   const location = useLocation();
   const formData = location.state;
-
-  //ContactFormPage.jsxからのデータを送信ボタンを押したときに削除する
-  const handleClick = () => {
-    const sessionItems = ["contactName", "mailAddress", "phoneNumber", "contactDetail"];
-    sessionItems.forEach((item) => sessionStorage.removeItem(item));
-  };
 
   return (
     <>
@@ -24,7 +19,6 @@ export const ConfirmPage = () => {
           </SubTitle>
           <Container>
             <ConfirmLead>送信内容</ConfirmLead>
-
             {Object.keys(formData).map((key, index) => (
               <Item key={key}>
                 <ConfirmLabel>{formItems[index].item}</ConfirmLabel>
@@ -32,9 +26,10 @@ export const ConfirmPage = () => {
               </Item>
             ))}
           </Container>
+
           <ButtonContainer>
             <Link to={"/submit"}>
-              <StyledButton onClick={handleClick}>送信</StyledButton>
+              <StyledButton>送信</StyledButton>
             </Link>
             <Link to={"/form"}>
               <StyledButton>戻る</StyledButton>

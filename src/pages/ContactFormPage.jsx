@@ -77,28 +77,32 @@ export const ContactFormPage = () => {
               {form.required && <Required>※必須</Required>}
             </LabelContainer>
             {form.type === "textarea" ? (
-              <ContactTextArea
-                value={formData[form.id]}
-                name={form.id}
-                id={form.id}
-                onChange={handleInput}
-                onBlur={handleBlur}
-                $errors={errors[form.id]}
-                $value={formData[form.id]}
-                $isFirstTouch={isFirstTouch[form.id]}
-              />
+              <div>
+                <ContactTextArea
+                  value={formData[form.id]}
+                  name={form.id}
+                  id={form.id}
+                  onChange={handleInput}
+                  onBlur={handleBlur}
+                  $errors={errors[form.id]}
+                  $value={formData[form.id]}
+                  $isFirstTouch={isFirstTouch[form.id]}
+                />
+              </div>
             ) : (
-              <FormInput
-                value={formData[form.id]}
-                type={form.type}
-                name={form.id}
-                id={form.id}
-                onChange={handleInput}
-                onBlur={handleBlur}
-                $errors={errors[form.id]}
-                $value={formData[form.id]}
-                $isFirstTouch={isFirstTouch[form.id]}
-              />
+              <div>
+                <FormInput
+                  value={formData[form.id]}
+                  type={form.type}
+                  name={form.id}
+                  id={form.id}
+                  onChange={handleInput}
+                  onBlur={handleBlur}
+                  $errors={errors[form.id]}
+                  $value={formData[form.id]}
+                  $isFirstTouch={isFirstTouch[form.id]}
+                />
+              </div>
             )}
             <ErrorComment $isFirstTouch={isFirstTouch[form.id]}>
               {isFirstTouch[form.id] === true ? errors[form.id] : ""}
@@ -159,7 +163,7 @@ const Subtitle = styled.div`
 const FormContent = styled.div`
   margin: 20px 0;
 `;
-const LabelContainer = styled.div`
+const LabelContainer = styled.span`
   margin-bottom: 8px;
 `;
 const Label = styled.label`
@@ -182,8 +186,8 @@ const CheckBoxRequired = styled.span`
 const FormInput = styled.input`
   font-size: 1.8rem;
   height: 40px;
-  width: 65%;
-  padding: 8px;
+  width: 100%;
+  padding: 0 0 0 3px;
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: 0.3s;
@@ -196,9 +200,9 @@ const FormInput = styled.input`
 `;
 const ContactTextArea = styled.textarea`
   font-size: 1.5rem;
-  width: 95%;
   height: 200px;
-  padding: 8px;
+  width: 100%;
+  padding: 0 0 0 3px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
